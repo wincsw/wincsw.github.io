@@ -1,2 +1,2 @@
-# Win Chan Personal Website
+# Win Chan's Personal Website
 https://wincsw.github.io/
