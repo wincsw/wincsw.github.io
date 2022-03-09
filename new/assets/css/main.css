@@ -1,0 +1,385 @@
+@import url("fontawesome-all.min.css");
+
+/* Variables */
+:root {
+  --font-family: "Courier New", monospace;
+  --normal-font: 400;
+  --bold-font: 450;
+  --bolder-font: 900;
+  --bg-color1: #F8F8F7;
+  --bg-color2: #ffffff;
+  --light-color1: #ACB7C3;
+  --light-color2: #778DA9;
+  --dark-color1: #415A77;
+  --dark-color2: #1B263B;
+  --bottom-margin: 0.5rem;
+  --bottom-margin-2: 1rem;
+  --line-height: 3rem;
+  --transition: 0.5s;
+  --screen-height: 100vh;
+  --section-pad: 3rem 10%;
+  --inner-pad: 0 4%;
+  --scroll: flex;
+}
+  
+/* Variables */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: var(--dark-color2);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--dark-color1);
+    text-decoration: none;
+}
+
+.header {
+  color: var(--dark-color2);
+  font-size: 300%;
+  text-align: left;
+  padding-bottom: 2rem;
+}
+
+/* Navbar */
+
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 3rem;
+  background-color: var(--bg-color1);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  display: var(--scroll);
+}
+
+
+
+nav h1 {
+  color: var(--dark-color2);
+  font-size: 250%;
+  transition: var(--transition);
+  
+
+}
+
+
+nav a {
+  padding: 0 1rem;
+  text-decoration: none;
+  font-size: 160%;
+  color: var(--dark-color2);
+}
+
+nav a:hover {
+    color: var(--dark-color1);
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+}
+
+nav ul li {
+  font-weight: var(--bold-font);
+}
+
+#loc {
+  padding-top: 0.9rem;
+}
+
+#social-media{
+  padding-top: 0.25rem;
+  font-size: 150%;
+}
+
+
+.menu {
+  color: var(--dark-color2);
+  font-size: 2rem;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
+}
+
+
+
+/* Hero section */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    margin: auto;
+    padding-top: 15rem;
+    padding-bottom: 15rem;
+    background-image: url("../images/HongKong.jpg");
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
+    background-color: var(--bg-color2);
+    height: var(--screen-height);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.name {
+    width: 50rem;
+    padding: 0.625rem;
+    transition: var(--transition);
+}
+
+
+.name h1 {
+  font-size: 500%;
+  color: var(--bg-color2);
+}
+
+.name p {
+    font-size: 200%;
+    color: var(--bg-color2);
+    padding-bottom: 5rem;
+
+}
+
+.hero a {
+  text-decoration: none;
+  font-size: 160%;
+  color: var(--dark-color2);
+  background-color: var(--bg-color1);
+  padding: 1rem;
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--dark-color2);
+}
+
+.hero a:hover {
+  color: var(--bg-color1);
+  background-color: var(--dark-color2);
+}
+
+@media (max-width: 800px) {
+  .name h1 {
+    font-size: 400%;
+  }
+
+  .name p {
+      font-size: 150%;
+
+  }
+}
+
+
+/* About section */
+
+.about {
+    background-color: var(--bg-color2);
+    padding: var(--section-pad);
+    
+}
+
+.about h2 {
+    margin-bottom: var(--bottom-margin);
+    color: var(--dark-color2);
+    font-size: 300%;
+    text-align: left;
+    padding-bottom: 2rem;
+}
+
+.about p {
+    line-height: var(--line-height);
+    color: var(--dark-color1);
+    padding: var(--inner-pad);
+    font-size: 150%;
+    
+}
+
+/* Skills section */
+
+
+.skills {
+  margin: auto;
+  text-align: center;
+  padding: var(--section-pad);
+  background-color: var(--bg-color2);
+  border-top: 3rem solid var(--bg-color1); 
+}
+
+
+
+.skills .note {
+    color: var(--dark-color1);
+    text-align: left;
+    padding: var(--inner-pad);
+    padding-bottom: 3rem;
+    font-size: 150%;
+    
+}
+
+
+#icon {
+    font-size: 500%;
+    color: var(--dark-color2);
+    padding: 1rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  background-color: transparent;
+
+}
+
+.skills-grid .skill-name {
+  color: var(--dark-color2);
+  font-size: 150%;
+}
+.grid-item {
+  text-align: center;
+  
+}
+
+/* Project section */
+.projects {
+  background-color: var(--bg-color2);
+  border-top: 3rem solid var(--bg-color1); 
+  padding: var(--section-pad);
+  
+}
+
+.projects p {
+  font-size: 150%;
+  color: var(--dark-color1);
+}
+
+.project-pic {
+  width: 65%;
+  height: 60%;
+}
+
+.projects-title {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 150%;
+  color: var(--dark-color2);
+  margin-bottom: var(--bottom-margin);
+}
+
+
+.projects-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+
+.project-card {
+  text-align: center;
+  width: 21.875rem;
+  padding: 1rem;
+  background-color: var(--bg-color2);
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--dark-color1);
+  padding: 20px;
+  margin: 10px;
+}
+
+
+.project-details {
+  margin-bottom: var(--bottom-margin);
+  padding: 0.4rem;
+  font-size: 120%;
+  color: var(--dark-color2);
+}
+
+.project-card:hover {
+  background-color: var(--bg-color1);
+}
+
+
+.contact {
+  background-color: var(--bg-color2);
+  border-top: 3rem solid var(--bg-color1); 
+  padding: var(--section-pad);
+  
+}
+
+.contact p {
+  font-size: 150%;
+  color: var(--dark-color1);
+  padding: var(--inner-pad);
+}
+
+/* Footer section */
+footer {
+  background-color: var(--bg-color1);
+  padding: 1.5rem;
+  text-align: center;
+  margin: 2rem 0 0;
+  font-size: 120%;
+}
+
+
+/* Responsive Web Design */
+@media screen and (max-width: 1500px) {
+  nav {
+    padding: 0.5rem 1rem;
+  }
+
+  nav ul {
+    gap: 0.5rem;
+  }
+
+  .social-media ul {
+    gap: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 1070px) {
+   nav ul {
+    position: fixed;
+    background-color: var(--bg-color);
+    flex-direction: column;
+    top: 86px;
+    left: 10%;
+    width: 80%;
+    text-align: center;
+    transform: translateX(120%);
+    transition: transform 0.5s ease-in;
+  }
+
+   nav ul li {
+    margin: 8px;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  nav ul.show {
+    transform: translateX(0);
+  }
+  
+}
