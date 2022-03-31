@@ -13,3 +13,11 @@ function closeMenu() {
         x.className = "nav";
     }
 }
+
+$(window).scroll(function () {
+    if ($(document).scrollTop() < 500) {
+        $('nav').hide();
+    } else {
+        $('nav').show();
+    }
+});
