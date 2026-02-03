@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CSS Styles -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <title>Win Chan | Portfolio</title>
+</head>
+
+<body>
+    <title> Win Chan | Portfolio </title>
+    </head>
+
+    <body>
+        <!-- Navbar -->
+
+        <nav class="nav" id="nav">
+            <h1> Win Chan </h1>
+
+            <ul>
+
+                <li class="nav-link" id="loc" onclick="closeMenu()"><a href="#about"> About </a></li>
+                <li class="nav-link" id="loc" onclick="closeMenu()"><a href="#skills"> Skills </a></li>
+                <li class="nav-link" id="loc" onclick="closeMenu()"><a href="#projects"> Projects </a></li>
+                <li class="nav-link" id="loc" onclick="closeMenu()"><a href="#contact"> Contact </a></li>
+                <li class="nav-link" id="social-media" onclick="closeMenu()"><a
+                        href="https://www.linkedin.com/in/win-chan">
+                        <span class="fa-brands fa-linkedin"></span>
+                    </a></li>
+                <li class="nav-link" id="social-media" onclick="closeMenu()"><a href="https://github.com/wincsw">
+                        <span class="fa-brands fa-github"></span>
+                    </a></li>
+            </ul>
+            <a href="javascript:void(0);" class="menu" onclick="menu()" id="menu">
+                <span class="fa-solid fa-bars"></span>
+            </a>
+
+        </nav>
+
+        <div class="main">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="name">
+                    <h1> Win Chan </h1>
+                    <p>Sophomore Computer Science Student </br>
+                        @ The University of Hong Kong</p>
+                    <a href="assets/file/CV_General.pdf" download>Have a look on my Resume</a>
+                </div>
+
+            </section>
+
+            <!-- About section -->
+            <section class="about" id="about">
+                <h2 class="header"> About Me </h2>
+                <p>
+                    I'm a flexiable computer science student at the University of Hong Kong, who are eager to learn,
+                    challenge
+                    the status quo, and use my knowledge to benefit the society.
+                </p>
+                <p>
+                    I'm also intrested in human-computer interaction, immersive technology, visualization, multimodal
+                    interaction,
+                    and education technology, and hope to learn more and try different projects on these fields!
+                </p>
+
+            </section>
+
+            <!-- Skills section -->
+            <section class="skills" id="skills">
+                <h2 class="header"> Skills </h2>
+
+                <p class="note">Here are some of my skills, still learning more.</br>
+                    (Check out my <a href="assets/file/CV_General.pdf" download>reseme</a> for the full list of skills)
+                </p>
+
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <span class="fa-brands fa-python" id="icon"></span>
+                        <p class="skill-name"> Python </p>
+                    </div>
+                    <div class="skill-item">
+                        <span class="fa-brands fa-java" id="icon"></span>
+                        <p class="skill-name"> Java </p>
+                    </div>
+                    <div class="skill-item">
+                        <span class="fa-solid fa-c" id="icon"></span>
+                        <p class="skill-name"> C++/C </p>
+                    </div>
+                    <div class="skill-item">
+                        <span class="fa-brands fa-linux" id="icon"></span>
+                        <p class="skill-name"> Linux </p>
+                    </div>
+                    <div class="skill-item">
+                        <span class="fa-brands fa-git" id="icon"></span>
+                        <p class="skill-name"> Git </p>
+                    </div>
+                    <div class="skill-item">
+                        <span class="fa-brands fa-html5" id="icon"></span>
+                        <p class="skill-name"> HTML5 </p>
+                    </div>
+                    <div class="skill-item">
+                        <span class="fa-brands fa-css3-alt" id="icon"></span>
+                        <p class="skill-name"> CSS3 </p>
+                    </div>
+                    <div class="skill-item">
+                        <span class="fa-brands fa-js-square" id="icon"></span>
+                        <p class="skill-name"> JavaScript </p>
+                    </div>
+                </div>
+
+
+            </section>
+
+            <!-- Projects section -->
+            <section class="projects" id="projects">
+                <h2 class="header"> Projects </h2>
+
+                <div class="projects-container">
+                    <div class="project-card">
+                        <img src="assets/images/BigTwo.png" alt="Big-Two" loading="lazy" class="project-pic" />
+                        <h3 class="project-title">Big Two</h3>
+                        <p class="project-details">
+                            A multi-player and network enable Big Two Card Game with GUI code in Java.
+                            </br> Made for the HKU course COMP2396
+                        </p>
+                        <a href="https://github.com/wincsw/Big-Two-Game" target="_blank" class="project-link">Check it
+                            Out</a>
+                    </div>
+                </div>
+
+                <div class="projects-container">
+                    <div class="project-card">
+                        <img src="assets/images/SurvivalSimulator.png" alt="Survival-Simulator" loading="lazy"
+                            class="project-pic" />
+                        <h3 class="project-title">Survival Simulator</h3>
+                        <p class="project-details">
+                            A text-based role-playing game which simulate survival on an island
+                            developed in C++.
+                            </br> Made for the HKU course ENGG1340/COMP2113
+                        </p>
+                        <a href="https://github.com/wincsw/ENGG1340-Project-Group-188" target="_blank"
+                            class="project-link">Check it
+                            Out</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact section -->
+            <section class="contact" id='contact'>
+                <h2 class="header"> Contact Me </h2>
+                <p> If you want to get in touch with me, feel free to send me an email at <a
+                        href="mailto: winnie.chanszewing@gmail.com">winnie.chanszewing@gmail.com</a> or connect my
+                    <a href="https://www.linkedin.com/in/win-chan">Linkedin</a> and have a chat :)
+                </p>
+            </section>
+
+
+            <!-- Footer section -->
+            <footer>
+                <p class="copy">&copy; Copyright 2022</p>
+                <p class="copy">
+                    Built with &#x2661; by Win Chan</a>
+                </p>
+            </footer>
+
+
+    </body>
+
+</html>

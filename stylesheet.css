@@ -1,0 +1,83 @@
+h1 {
+    font-size: 3em;
+    margin: 0.25em 0 1em 0;
+}
+
+.content-container {
+    max-width: 57.5em;
+    margin: 0 auto;
+    text-align: left;
+    padding: 1em;
+}
+
+.content-container h1 {
+    text-align: center;
+}
+
+.content-container center {
+    text-align: center;
+}
+
+
+img.intext {
+    display: inline;
+    height: 1em;
+}
+
+img.roles {
+    display: inline;
+    height: 1.5em;
+}
+
+/* Dark mode (default) */
+body {
+    background: #000000;
+    color: #FFFFFF;
+    font-size: 1.2em;
+}
+
+
+a:link {
+    text-decoration: none;
+    color: #00FF00;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #00ff00a6;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
+
+
+/* Light mode */
+body.light-mode {
+    color: #000000;
+    background-image: url('images/cloud.jpg');
+    font-size: 1.2em;
+}
+
+
+body.light-mode a:link {
+    text-decoration: none;
+    color: #0000FF;
+}
+
+body.light-mode a:visited {
+    text-decoration: none;
+    color: #800080
+}
+
+body.light-mode a:hover {
+    text-decoration: underline;
+}
+
+body.light-mode a:active {
+    text-decoration: underline;
+}
