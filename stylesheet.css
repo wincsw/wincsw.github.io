@@ -37,29 +37,8 @@ h1 {
     display: flex;
     align-items: center;
     gap: 0.5em;
-}
-
-.role-item::after {
-    content: "|";
-    margin-left: 0.5em;
-    font-size: 3em;
-}
-
-.role-item:last-child::after {
-    content: "";
-}
-
-/* Mobile: stack image above text, remove separators */
-@media (max-width: 550px) {
-    .role-item {
-        flex-direction: column;
-        gap: 0.3em;
-    }
-
-    .role-item::after {
-        content: "";
-        /* hide separators on mobile */
-    }
+    border: 2px solid #00FF00;
+    padding: 0.5em 1em;
 }
 
 img.intext {
@@ -85,7 +64,7 @@ img#bottom_bar {
 }
 
 img.top_img {
-    height: 6em;
+    height: 6.5em;
     margin-top: 0.5em;
 }
 
@@ -93,6 +72,38 @@ img#research_img {
     height: 9em;
     margin-top: 0.5em;
 }
+
+img#project_img {
+    width: 25em;
+    height: auto;
+    margin-top: 0.5em;
+}
+
+img#ione_img {
+    width: 25%;
+    height: auto;
+}
+
+img.project_img {
+    width: 70%;
+    height: auto;
+    max-width: 25em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+figure {
+    text-align: center;
+}
+
+.multiple_fig {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
+    gap: 0em;
+    margin: 0.5em 0;
+    align-items: center;
+}
+
 
 .projects-grid {
     display: grid;
@@ -110,6 +121,14 @@ img#research_img {
 .project img {
     width: 100%;
     height: auto;
+}
+
+/* Mobile */
+@media (max-width: 550px) {
+    .role-item {
+        flex-direction: column;
+        gap: 0.3em;
+    }
 }
 
 /* Dark mode (default) */
@@ -214,4 +233,12 @@ body.light-mode .project {
     text-align: center;
     border: 2px solid #ff00ff;
     padding: 1em;
+}
+
+body.light-mode .role-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    border: 2px solid #ff00ff;
+    padding: 0.5em 1em;
 }

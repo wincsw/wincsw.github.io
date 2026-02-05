@@ -1,0 +1,200 @@
+<html>
+<script src="../script.js"></script>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Win Chan's very fun web page + portfolio!">
+    <title>Win's Digital Space</title>
+    <!-- adding icon on the tab  -->
+    <!-- <link rel="icon" type="image/png" href="_assets/root/favicon.png" /> -->
+    <link rel="stylesheet" href="../stylesheet.css">
+
+
+</head>
+
+<body>
+    <div class="content-container">
+        <div class="button_container">
+            <a href="index.html">
+                <button id="home_button" class="top_button"><img id="home_img" class="button_img"
+                        src="../images/home.gif" alt="home" />
+                    &nbsp;
+                    Home</button>
+            </a>
+            <button id="theme_button" class="top_button" onclick="toggleTheme()"><img id="theme_img" class="button_img"
+                    src="../images/moon.gif" alt="moon" /> &nbsp; Change Theme</button>
+        </div>
+        <center>
+            <img id="project_img" class="top_img" src="../images/project.png" alt="Design Project" />
+        </center>
+
+        <!-- <h1><img src="../images/construction.gif" class="intext" alt="under constrction" /> Under Construction</h1> -->
+        <h1>Sound of Urban Environment: Today & Future</h1>
+
+        <div class="project_discription">
+            <h2>Interactive AR installation exploring urban futures through speculative soundscapes</h2>
+            Collaborated with Wei-Jun Lin
+            <br>
+            Supervised by Laura Mchugh
+            <br>
+            <a href="https://drive.google.com/file/d/1g6wn5F1W8sHv9yZZVRpvjoDmZUKULFJt/view?usp=sharing">Paper</a>
+            |
+            <a href="https://drive.google.com/file/d/13rEMk62nA6UIDmZRosoUKUVnMp7qsTGI/view?usp=sharing">Video</a>
+            <br><br>
+            <p>
+                We rarely pause, listen, and think of the soundscapes in our city, but they carries information about
+                activity, culture,
+                atmosphere, and time. These are continuously shaped by technological, social, and environmental changes,
+                and thus are a
+                refection of the transformation of our urban environment. So, can sound serve as a medium for reflecting
+                on and
+                imagining urban futures? By making sound the primary medium for speculation, we hoped to create space
+                for reflection in
+                that invites interpretation rather than prescribing meaning. This project used design fiction
+                methodologies and spatial
+                audio in AR to create an immersive experience inviting audiences to listen to and question how cities
+                might evolve.
+            </p>
+            <br>
+            <h3>Design Concept</h3>
+            <p>
+                We proposed a speculative system that uses a type of hypothetical color-changing bioluminescence
+                mushroom to creating a
+                lighting system. In the system, there will be a "mama mushroom" that controls how the network of "baby
+                mushrooms" lit
+                up, mimicking how real fungi communicate through mycelial connections.
+                <br><br>
+                The design challenges typical smart home aesthetics of sleek minimalism, instead embracing organic
+                forms, handcrafted
+                materials, and the "semi-chaotic blend" characteristic of solarpunk futures—where advanced biotechnology
+                coexists with
+                earthy, living surroundings.
+            </p>
+            <br>
+            <h3>Design Process</h3>
+            <p>
+                We used the KTH open-air square in Stockholm as our focus, where we explore how to pair up soundscapes
+                that are/will be present in the years 2025 and 2040.
+                <br>
+            <figure>
+                <img src="../images/projects/urbanSound/kthFountain.jpg" alt="KTH open-air square" class="project_img">
+                <figcaption>The KTH open-air square</figcaption>
+            </figure>
+            <br>
+
+            We use design fiction as our starting point of our design. The process began with mapping current
+            phenomena (e.g. global
+            warming, EU-Russia tensions, AI advancement) onto a design fiction matrix to ground speculation on real
+            trends while
+            identifying potential future events like declining biodiversity, electric vehicle adoption, stricter
+            immigration
+            policies, and international conflicts.
+            <br>
+            <figure>
+                <img src="../images/projects/urbanSound/designFiction.png" alt="Design Fiction Matrix"
+                    class="project_img">
+                <figcaption>Design fiction matrix</figcaption>
+            </figure>
+            <br>
+            We also created "what if" scenarios to imagine how these forces might reshape urban sound: What if global
+            warming
+            continues? What if self-driving cars become reliable? What if society becomes more conservative? These
+            questions guided
+            the soundscape composition.
+            <br><br>
+            The present soundscapes used real recordings from four corners of the square at different times and days,
+            layered with
+            additional sounds to emphasize aspects we wanted to contrast with the future. Future soundscapes with our
+            speculated
+            changes, such as less birdsong due to species decline, electric vehicles replacing oil cars, war alerts, and
+            more.
+            <br><br>
+            The soundscapes were structured in three layers (human, mechanical, natural) based on how urban sounds are
+            categorized,
+            with each corner emphasizing different layers based on its location and characteristics.
+            </p>
+            <br>
+            <h3>Implementation</h3>
+            <p>
+                When the AR application detects the image anchor, four virtual "windows" will appear. Each window
+                displayed a photo of
+                one of the corners of the square, acting as a portal to that corner's soundscape. As visitors moved
+                through the physical
+                space, sound sources shifted spatially and volumetrically based on their position, creating an embodied
+                experience where
+                physical movement shaped what they heard.
+                <br>
+            <div class="multiple_fig">
+                <figure>
+                    <img src="../images/projects/urbanSound/placement.png"
+                        alt="placements of image anchor and four corners of the square in AR" class="project_img">
+                    <figcaption>Placement of image anchor and 4 corners of the square in AR</figcaption>
+                </figure>
+                <figure>
+                    <img src="../images/projects/urbanSound/corner.png"
+                        alt="The corresponding location of the soundscape in the square" class="project_img">
+                    <figcaption>The corresponding location of the soundscape in the square</figcaption>
+                </figure>
+                <figure>
+                    <img src="../images/projects/urbanSound/virtualWindows.png" alt="The virtual windows "
+                        class="project_img">
+                    <figcaption>The virtual windows, the closer the user are to the window the darker the frame is
+                    </figcaption>
+                </figure>
+            </div>
+            Rotating the device between upright and upside-down gradually transitions the soundscape between present
+            (2025) and
+            future (2040), with a clock interface indicating the year. This interaction mimics how clocks hands runs,
+            focusing on
+            fluency and pliability, for a responsive and intuitive control for navigating time through physical gesture.
+            <figure>
+                <img src="../images/projects/urbanSound/clockInterface.png" alt="The clock interface for 2025 and 2024"
+                    class="project_img">
+                <figcaption>The clock interface for 2025 (left) and 2024 (right)
+                </figcaption>
+            </figure>
+            <br>
+
+            </p>
+            <br>
+            <h3>Responses</h3>
+            <p>
+                We asked participant to sketch how they see the future of urban space after experiencing this
+                installation. The
+                responses were pretty divergent. Some participants sketched dystopian futures with war, extreme weather,
+                technological
+                surveillance, separation from loved ones, and expressed they feel stress and pessimistic for the future.
+                Others imagined
+                hopeful, greener futures with more natural sounds and wrote about feeling hopeful.
+            <figure>
+                <img src="../images/projects/urbanSound/responses.png"
+                    alt="Drawings and writings from the participants for their idea of urban future after experiencing the installation"
+                    class="project_img">
+                <figcaption>Drawings and writings from the participants for their idea of urban future after
+                    experiencing the installation
+                </figcaption>
+            </figure>
+            <br>
+
+            Even though our own speculation is a bit more leaning on the pessimistic side, this shows how the
+            installation sparks
+            different imaginations of the future that are outside of the creator (us) perspective, showing that sound
+            can be a
+            speculative medium that leaves room for personal interpretation and critical imagination.
+            </p>
+        </div>
+        <br>
+        <hr>
+
+        <div class="footer_note">
+            <center>
+                <h2>Thanks for coming to my site!</h2>
+                <p>Last Update: Feb 2026</p>
+                <br>
+                <img src="../images/arrowbar.gif" alt="line" id="bottom_bar" />
+            </center>
+        </div>
+</body>
+
+</html>

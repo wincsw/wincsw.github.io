@@ -1,0 +1,155 @@
+<html>
+<script src="../script.js"></script>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Win Chan's very fun web page + portfolio!">
+    <title>Win's Digital Space</title>
+    <!-- adding icon on the tab  -->
+    <!-- <link rel="icon" type="image/png" href="_assets/root/favicon.png" /> -->
+    <link rel="stylesheet" href="../stylesheet.css">
+
+
+</head>
+
+<body>
+    <div class="content-container">
+        <div class="button_container">
+            <a href="index.html">
+                <button id="home_button" class="top_button"><img id="home_img" class="button_img"
+                        src="../images/home.gif" alt="home" />
+                    &nbsp;
+                    Home</button>
+            </a>
+            <button id="theme_button" class="top_button" onclick="toggleTheme()"><img id="theme_img" class="button_img"
+                    src="../images/moon.gif" alt="moon" /> &nbsp; Change Theme</button>
+        </div>
+        <center>
+            <img id="project_img" class="top_img" src="../images/project.png" alt="Design Project" />
+        </center>
+
+        <!-- <h1><img src="../images/construction.gif" class="intext" alt="under constrction" /> Under Construction</h1> -->
+        <h1>Mama & Baby Mushrooms</h1>
+
+        <div class="project_discription">
+            <h2>Speculative smart home lighting system inspired by bioluminescence and fungal mycelial networks</h2>
+            Collaborated with Jiashu Sun, Lucky Hyosun Kim, Stella Huynh
+            <br>
+            <a href="../other/mushroomVideoPrototype.mp4">Video Prototype</a> | <a
+                href="https://www.figma.com/board/09bbJLqA7qVTBrxWmHti2H/Orange-Juice-%F0%9F%8D%8A---Physical-Interaction?node-id=0-1&t=vvQnAFSBYiO18Uv1-1">
+                Design Process
+                Document </a>
+            <br><br>
+            <p>
+                What will smart home technology look like if it is based on ecological systems rather than
+                energy-intensive, surveilling
+                smart home network? Based on the idea of solarpunk, we question if our homes can functioned more like
+                living ecosystems,
+                and if system connection design came from nature rather than a centralized control systems.
+            </p>
+            <br>
+            <h3>Design Concept</h3>
+            <p>
+                We want to reimagin a home lighting system that draws inspiration from bioluminescence (the ability to
+                illuminate
+                some organism
+                have) and mycelial networks (fungal's webs that connect and communicate across with each other). The
+                design came from nature rather than a centralized control systems.
+                <br><br>
+                Therefore, we designed a speculative system that uses a type of hypothetical color-changing
+                bioluminescence
+                mushroom to creating a
+                lighting system. In the system, there will be a "mama mushroom" that controls how the network of "baby
+                mushrooms" lit
+                up, mimicking how real fungi communicate through mycelial connections.
+            <figure>
+                <img src="../images/projects/mushroom/designConcept.jpeg" alt="illustration of the design concept"
+                    class="project_img">
+                <figcaption>Illustration of the design concept</figcaption>
+            </figure>
+            <br>
+            This design challenges the typical smart home aesthetics of sleek minimalism, instead embracing organic
+            forms, handcrafted materials, and the "semi-chaotic blend" characteristic of solarpunk futures, where
+            advanced biotechnology
+            coexists with earthy, living surroundings.
+            </p>
+            <br>
+            <h3>Implementation</h3>
+            <p>
+                A <a href="../other/mushroomVideoPrototype.mp4">video prototype</a> illustrated how the full speculative
+                system would function in a home context. The mama
+                mushroom will be the control placed in different rooms. It can control the path the baby mushrooms light
+                up. The light trail will lead to different rooms, with the trail to each room having different colors
+                (match with the mama mushroom's color), allowing user to navigate in the dark.
+                <br><br>
+                The mama mushroom's cap rotates to select which room's pathway should illuminate. The light trail of the
+                baby mushrooms will light up when the user pads the mama
+                mushroom, using a speculative fungi mycelial networks that can sense and respond to touch.
+                <br><br>
+                We built a working prototype to illustrate the physical and tactile interactions of the design.
+            <figure>
+                <img src="../images/projects/mushroom/physicalPrototype.png"
+                    alt="Physical prototype of the mushroom system" class="project_img">
+                <figcaption>Physical prototype of the mushroom system</figcaption>
+            </figure>
+            <br>
+            This prototype have a rotation mechanisms to achieve the rotation of the mama mushroom's cap. We also used
+            Arduino, touch sensors, and color-changing LEDs to create the interaction of padding mama mushroom and
+            then the baby mushroom change color.
+            <div class="multiple_fig">
+                <figure>
+                    <img src="../images/projects/mushroom/rotationMechnism_1.jpeg"
+                        alt="Side view of the rotation mechanism" class="project_img">
+                    <figcaption>Side view of the rotation mechanism</figcaption>
+                </figure>
+                <figure>
+                    <img src="../images/projects/mushroom/rotationMechnism_2.jpeg"
+                        alt="Top view of the rotation mechanism" class="project_img">
+                    <figcaption>Top view of the rotation mechanism</figcaption>
+                </figure>
+                <figure>
+                    <img src="../images/projects/mushroom/arduino.jpeg" alt="Arduino setup for the system"
+                        class="project_img">
+                    <figcaption>Arduino setup for the system</figcaption>
+                </figure>
+            </div>
+
+            For the mushrooms, we used worbla plastic (shaping with the help of clay molds) and other
+            translucent materials to allow the light to shine through and create a bioluminescent aesthetic. We also
+            decorated the mushroom with moss like decorations to create a more earthy feel.
+            </p>
+            <div class="multiple_fig">
+                <figure>
+                    <img src="../images/projects/mushroom/clayMold.jpeg" alt="Clay mold for shaping the baby mushrooms"
+                        class="project_img">
+                    <figcaption>Clay mold for shaping the baby mushrooms</figcaption>
+                </figure>
+                <figure>
+                    <img src="../images/projects/mushroom/plastic.jpeg" alt="worbla plastic for the mama mushroom cap"
+                        class="project_img">
+                    <figcaption>Worbla plastic for the mama mushroom cap</figcaption>
+                </figure>
+                <figure>
+                    <img src="../images/projects/mushroom/physicalPrototype_light.png.jpeg"
+                        alt="Physical prototype with decorations" class="project_img">
+                    <figcaption>Physical prototype with decorations</figcaption>
+                </figure>
+            </div>
+            <br><br>
+
+        </div>
+        <br>
+        <hr>
+
+        <div class="footer_note">
+            <center>
+                <h2>Thanks for coming to my site!</h2>
+                <p>Last Update: Feb 2026</p>
+                <br>
+                <img src="../images/arrowbar.gif" alt="line" id="bottom_bar" />
+            </center>
+        </div>
+</body>
+
+</html>
