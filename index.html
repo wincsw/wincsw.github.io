@@ -1,6 +1,4 @@
 <html>
-<script src="/_assets/midi/bg-sound.min.js"></script>
-<script>BgSound.enableCompatMode({ baseUrl: "/_assets/midi/" })</script>
 <script src="script.js"></script>
 
 <head>
@@ -17,17 +15,28 @@
 
 <body>
     <div class="content-container">
-        <button onclick="toggleTheme()">Toggle Theme</button>
+        <div class="button_container">
+            <a href="index.html">
+                <button id="home_button" class="top_button"><img id="home_img" class="button_img" src="images/home.gif"
+                        alt="home" />
+                    &nbsp;
+                    Home</button>
+            </a>
+            <button id="theme_button" class="top_button" onclick="toggleTheme()"><img id="theme_img" class="button_img"
+                    src="images/moon.gif" alt="moon" /> &nbsp; Change Theme</button>
+        </div>
         <center>
-            <h1>Wellcome to WIN's Digital Space :)</h1>
+            <img id="welcome_img" class="top_img" src="images/welcome_dark.gif" alt="Welcome Logo" />
+            <br>
+            <h1>WIN's Digital Space :)</h1>
         </center>
 
         <p>
-        <h3>I'm Win (full name: Sze Wing Chan but Win is easier haha).
+        <h3>I'm Win (full name Sze Wing Chan but Win is easier haha)
             <br>
             Currently surviving while working on my thesis at KTH in Stockholm <img
-                src="images/sweden-flag-1118710195.gif" class="intext" alt="Swedish Flag" />, but
-            originally from Hong Kong <img src="images/hong-kong-flag.gif" class="intext" alt="Hong Kong Flag" />
+                src="images/sweden-flag-1118710195.gif" class="intext" alt="Swedish Flag" />, originally from Hong Kong
+            <img src="images/hong-kong-flag.gif" class="intext" alt="Hong Kong Flag" />
         </h3>
         <br>
         I make:
@@ -54,20 +63,20 @@
         <br>
 
         <!-- <p> -->
-        [<a href="rant.html">CLICK HERE to see some <b>COOL PROJECTS</b> I have done</a>]
+        [<a href="projects.html">CLICK HERE to see my <b>COOL PROJECTS</b> I have done</a>]
         <br>
-        [<a href="rant.html">CLICK HERE to see my <b>RESEARCH</b> (serious work)</a>]
+        [<a href="research.html">CLICK HERE to see my <b>RESEARCH</b> (serious work)</a>]
         <br>
-        [<a href="rant.html">CLICK HERE to see a more organized <b>CV</b></a>]
+        [<a target="_blank" href="cv.pdf">CLICK HERE to see my <b>CV</b></a>]
         <br>
-        [<a href="rant.html">CLICK HERE to see my <b>GITHUB</b></a>]
+        [<a target="_blank" href="https://github.com/wincsw">CLICK HERE to see my <b>GITHUB</b></a>]
         <br><br>
         <center>
             <h3>
                 <img src="images/book.gif" class="roles" alt="book" /> Master's Student |
                 <img src="images/anime-glasses.gif" class="roles" alt="Detective Conan Glasses" />
                 Researcher |
-                <img src="images/tool.gif" class="roles" alt="Tool" /> Designer |
+                <img src="images/design.gif" class="roles" alt="Tool" /> Designer |
                 <img src="images/computer.gif" class="roles" alt="computer" /> Developer |
                 <img src="images/coffee.gif" class="roles" alt="coffee" /> Need to be Caffinated
             </h3>
@@ -97,15 +106,16 @@
     </div>
     <br>
     <hr>
-    <br>
 
-
-    <h1>Thanks for coming to my site!</h1>
-    <img src="images/construction.gif" class="roles" alt="computer" /> Under Construction
-    (always)
-
-    <p>Last Update: </p>
-    <br>
+    <div class="footer_note">
+        <center>
+            <h2>Thanks for coming to my site!</h2>
+            <!-- <h3><img src="images/construction.gif" class="roles" alt="computer" /> Under Construction (always)</h3> -->
+            <p>Last Update: Feb 2026</p>
+            <br>
+            <img src="images/arrowbar.gif" alt="line" id="bottom_bar" />
+        </center>
+    </div>
 </body>
 
 </html>

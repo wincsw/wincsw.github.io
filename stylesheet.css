@@ -18,6 +18,12 @@ h1 {
     text-align: center;
 }
 
+.button_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 
 img.intext {
     display: inline;
@@ -26,13 +32,35 @@ img.intext {
 
 img.roles {
     display: inline;
-    height: 1.5em;
+    height: 2em;
+}
+
+img.button_img {
+    display: inline;
+    height: 2em;
+    width: auto;
+    vertical-align: middle;
+}
+
+img#bottom_bar {
+    width: 100%;
+    height: auto;
+}
+
+img.top_img {
+    height: 5em;
+    margin-top: 0.5em;
+}
+
+img#research_img {
+    height: 9em;
+    margin-top: 0.5em;
 }
 
 /* Dark mode (default) */
 body {
-    background: #000000;
     color: #FFFFFF;
+    background-image: url('images/blackbg.gif');
     font-size: 1.2em;
 }
 
@@ -55,11 +83,34 @@ a:active {
     text-decoration: underline;
 }
 
+img#theme_img {
+    content: url('images/moon.gif');
+}
+
+img#welcome_img {
+    content: url('images/welcome_dark.gif');
+}
+
+img#bottom_bar {
+    content: url('images/arrowbar.gif');
+}
+
+
+button.top_button {
+    padding: 0.2em;
+    padding-right: 0.75em;
+    font-size: 0.8em;
+    color: #fff;
+    background: #000;
+    border: 0.15em solid #fff;
+    cursor: pointer;
+}
+
 
 /* Light mode */
 body.light-mode {
     color: #000000;
-    background-image: url('images/cloud.jpg');
+    background-image: url('images/rainbow.jpg');
     font-size: 1.2em;
 }
 
@@ -80,4 +131,26 @@ body.light-mode a:hover {
 
 body.light-mode a:active {
     text-decoration: underline;
+}
+
+body.light-mode img#theme_img {
+    content: url('images/sun.gif');
+}
+
+body.light-mode img#welcome_img {
+    content: url('images/welcome_light.gif');
+}
+
+body.light-mode img#bottom_bar {
+    content: url('images/strobebar.gif');
+}
+
+body.light-mode button.top_button {
+    padding: 0.2em;
+    padding-right: 0.75em;
+    font-size: 0.8em;
+    color: #000000;
+    background: #ffffff;
+    border: 0.15em solid #000000;
+    cursor: pointer;
 }
