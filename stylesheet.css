@@ -18,6 +18,13 @@ h1 {
     text-align: center;
 }
 
+.rant-container {
+    max-width: 57.5em;
+    margin: 0 auto;
+    text-align: left;
+    padding: 1em;
+}
+
 .button_container {
     display: flex;
     justify-content: space-between;
@@ -179,6 +186,7 @@ button.top_button {
     border: 0.15em solid #fff;
     cursor: pointer;
 }
+
 
 
 /* Light mode */
