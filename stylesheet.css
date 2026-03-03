@@ -25,6 +25,13 @@ h1 {
     padding: 1em;
 }
 
+.word-break-container {
+    word-break: normal;
+    overflow-wrap: break-word;
+    white-space: nowrap;
+    /* only break long words if they truly overflow */
+}
+
 .button_container {
     display: flex;
     justify-content: space-between;
