@@ -1,3 +1,11 @@
+ :root{
+    --ink: black;
+    --bgcolor: white;
+    /* for pixel speech bubble */
+    --step: 8px;      /* size of each pixel stair step */
+    --border: 5px;    /* outline thickness, keep = --step for clean look */
+  }
+
 @font-face {
   font-family: myFont; /* set name */
   src: url(w95fa/w95f.woff); /* url of the font */
@@ -9,16 +17,21 @@ body {
 
 }
 
-nav a { 
-    color: black;
+a {
+    color: var(--ink);
+}
+
+a:hover { 
+    background-color: var(--ink);
+    color: var(--bgcolor);
+    text-decoration: none;
+}
+
+nav a{ 
     font-size:1.75rem;
     margin-bottom:10px;
 }
-nav a:hover { 
-    background-color: black;
-    color: white;
-    text-decoration: none;
-}
+
 
 
 .two_column {
@@ -27,6 +40,26 @@ nav a:hover {
     padding: 10px;
     text-align: left;
 } 
+
+.vertical_layout 
+{
+    /* display: grid;
+    grid-template-columns: auto; */
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5em;
+    text-align: center;
+
+}
+
+/* .vertical_layout div {
+    position: absolute;
+} */
+
+
+
 
 nav {
     display:flex;
@@ -40,7 +73,7 @@ nav {
 
 header, footer {text-align:left;}
 
-header, main, footer {
+header, main, footer{
     display:flex;
     flex-direction: row;
     text-align: left;
@@ -52,10 +85,27 @@ header, main, footer {
     margin-bottom: 0.5vw;
 }
 
-h1 {
-    font-size: 2.5rem;
+.trail {
+    font-size: 1.25rem;
+    text-align: left;
+    width:90%;
+    margin:0 auto;
+    margin-bottom: 0.5vw;
 }
 
+h1 {
+    font-size: 2.75rem;
+}
+
+.me_image img{
+    text-align: right;
+}
+
+.me_image #me_image_about {
+    height: 50vw;
+    max-height: 250px;
+    /* margin: h auto; */
+}
 
 @media only screen and (min-width: 1100px) { 
     body {
@@ -87,10 +137,7 @@ h1 {
         width:75%;
         margin:0 auto;
     }
-    .me_image { display:block;
-    grid-column: 2;
-    /* Positions the image in the second column */
-    justify-self: left;}
+    
     header, footer {
         text-align:left;
         width:90%;
@@ -113,3 +160,142 @@ h1 {
     }
     
 }
+
+/* pixel speech bubble */
+
+.bubble-container{
+    position: relative;
+    height: auto;
+    width: 100%;
+    padding-bottom: 0px;
+    text-align: left;
+    
+}
+
+.bubble-container p{
+    margin: 0 auto;
+    padding: 0;
+    text-align: left;
+    padding-bottom: 0.5rem;
+}
+
+/* Staircase "rounded" rectangle via stepped clip-path (3-step corners) */
+.bubble-shape{
+clip-path: polygon(
+    0 calc(var(--step)*3), var(--step) calc(var(--step)*3), var(--step) calc(var(--step)*2),
+    calc(var(--step)*2) calc(var(--step)*2), calc(var(--step)*2) var(--step),
+    calc(var(--step)*3) var(--step), calc(var(--step)*3) 0,
+
+    calc(100% - var(--step)*3) 0, calc(100% - var(--step)*3) var(--step),
+    calc(100% - var(--step)*2) var(--step), calc(100% - var(--step)*2) calc(var(--step)*2),
+    calc(100% - var(--step)) calc(var(--step)*2), calc(100% - var(--step)) calc(var(--step)*3),
+    100% calc(var(--step)*3),
+
+    100% calc(100% - var(--step)*3), calc(100% - var(--step)) calc(100% - var(--step)*3),
+    calc(100% - var(--step)) calc(100% - var(--step)*2), calc(100% - var(--step)*2) calc(100% - var(--step)*2),
+    calc(100% - var(--step)*2) calc(100% - var(--step)), calc(100% - var(--step)*3) calc(100% - var(--step)),
+    calc(100% - var(--step)*3) 100%,
+
+    calc(var(--step)*3) 100%, calc(var(--step)*3) calc(100% - var(--step)),
+    calc(var(--step)*2) calc(100% - var(--step)), calc(var(--step)*2) calc(100% - var(--step)*2),
+    var(--step) calc(100% - var(--step)*2), var(--step) calc(100% - var(--step)*3),
+    0 calc(100% - var(--step)*3)
+);
+}
+
+.bubble-border{
+position: relative;
+background: var(--ink);
+padding: var(--border);
+}
+
+.bubble-fill{
+background: var(--bgcolor);
+color: var(--ink);
+padding: 22px 26px;
+font-size: 1.2rem;
+line-height: 1.25;
+/* font-weight: bold; */
+}
+
+.bubble-fill p{ margin: 0; }
+
+/* --- Pointy pixel tail: jagged staircase triangle, built from same two layers --- */
+.tail-border{
+    position: relative;
+    left: 4px;
+    top: 100%;
+    margin-top: calc(var(--border) * -1); /* overlap bubble bottom edge */
+    background: var(--ink);
+    width: 40px;
+    height: 48px;
+    clip-path: polygon(
+        0 0,
+        var(--step) 0, var(--step) var(--step),
+        calc(var(--step)*2) var(--step), calc(var(--step)*2) calc(var(--step)*2),
+        calc(var(--step)*3) calc(var(--step)*2), calc(var(--step)*3) calc(var(--step)*3),
+        calc(var(--step)*4) calc(var(--step)*3), calc(var(--step)*4) calc(var(--step)*4),
+        calc(var(--step)*3) calc(var(--step)*4),
+        calc(var(--step)*3) calc(var(--step)*3),
+        calc(var(--step)*2) calc(var(--step)*3),
+        calc(var(--step)*2) calc(var(--step)*2),
+        var(--step) calc(var(--step)*2),
+        var(--step) var(--step),
+        0 var(--step)
+    );
+}
+
+  .pixel-circle{
+    clip-path: polygon(
+      37.5% 0, 62.5% 0, 62.5% 12.5%, 75% 12.5%, 75% 25%, 87.5% 25%, 87.5% 37.5%,
+      100% 37.5%, 100% 62.5%, 87.5% 62.5%, 87.5% 75%, 75% 75%, 75% 87.5%,
+      62.5% 87.5%, 62.5% 100%, 37.5% 100%, 37.5% 87.5%, 25% 87.5%, 25% 75%,
+      12.5% 75%, 12.5% 62.5%, 0 62.5%, 0 37.5%, 12.5% 37.5%, 12.5% 25%,
+      25% 25%, 25% 12.5%, 37.5% 12.5%
+    );
+  }
+
+  .tail-dot{
+    position: absolute;
+    box-sizing: border-box;
+  }
+
+  .tail-dot-border{
+    background: var(--ink);
+    width: 100%;
+    height: 100%;
+  }
+
+  .tail-dot-fill{
+    position: absolute;
+    inset: var(--border);
+    background: var(--bgcolor);
+  }
+
+  .tail-dot--1{
+    width: 34px;
+    height: 34px;
+    left: 75%;
+    /* top: %; */
+    margin-top: 10px;
+  }
+
+  .tail-dot--2{
+    width: 20px;
+    height: 20px;
+    left: 70%;
+    /* top: 100%; */
+    margin-top: 40px;
+  }
+
+  .tail-dot--3{
+    width: 10px;
+    height: 10px;
+    left: 65%;
+    /* top: 100%; */
+    margin-top: 60px;
+  }
+
+  .tail-dot--3 .tail-dot-fill{
+    inset: 3px; /* thinner outline so the smallest dot doesn't fill solid */
+  }
