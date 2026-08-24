@@ -1,273 +1,115 @@
-h1 {
-    font-size: 3em;
-    margin: 0.25em 0 1em 0;
+@font-face {
+  font-family: myFont; /* set name */
+  src: url(w95fa/w95f.woff); /* url of the font */
 }
 
-a.intext {
-    display: inline;
-    height: 1em;
+body {
+    font-family: myFont; /* use font */
+    padding:5%;
+
 }
 
-.content-container {
-    max-width: 57.5em;
-    margin: 0 auto;
+nav a { 
+    color: black;
+    font-size:1.75rem;
+    margin-bottom:10px;
+}
+nav a:hover { 
+    background-color: black;
+    color: white;
+    text-decoration: none;
+}
+
+
+.two_column {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
     text-align: left;
-    padding: 1em;
-}
+} 
 
-.content-container h1 {
-    text-align: center;
-}
-
-.content-container center {
-    text-align: center;
-}
-
-.rant-container {
-    max-width: 57.5em;
-    margin: 0 auto;
+nav {
+    display:flex;
+    flex-direction: column;
+    height:auto;
+    justify-content: space-evenly;
     text-align: left;
-    padding: 1em;
+    font-size:1rem;
+    width:50vw;
 }
 
-.word-break-container {
-    word-break: normal;
-    overflow-wrap: break-word;
-    white-space: nowrap;
-    /* only break long words if they truly overflow */
-}
+header, footer {text-align:left;}
 
-.button_container {
-    display: flex;
+header, main, footer {
+    display:flex;
+    flex-direction: row;
+    text-align: left;
+    width:90%;
+    gap:0;
     justify-content: space-between;
-    align-items: center;
+    padding:0;
+    margin:0 auto;
+    margin-bottom: 0.5vw;
+}
+
+h1 {
+    font-size: 2.5rem;
 }
 
 
-.roles-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.75em;
-    text-align: center;
-}
-
-.role-item {
-    /* display: flex; */
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 0.5em;
-    border: 2px solid #00FF00;
-    /* padding: 1.5em 1em; */
-    padding: 1em 0.75em;
-}
-
-img.intext {
-    display: inline;
-    height: 1em;
-}
-
-img.pagewidth {
-    width: 50%;
-}
-
-img.roles {
-    display: inline;
-    height: 3em;
-}
-
-img.button_img {
-    display: inline;
-    height: 2em;
-    width: auto;
-    vertical-align: middle;
-}
-
-img#bottom_bar {
-    width: 100%;
-    height: auto;
-}
-
-img.top_img {
-    /* height: 6.5em; */
-    max-height: 6.5em;
-    margin-top: 0.5em;
-    max-width: 90%;
-}
-
-img#research_img {
-    height: 9em;
-    margin-top: 0.5em;
-}
-
-img#project_img {
-    width: 25em;
-    height: auto;
-    margin-top: 0.5em;
-}
-
-img#ione_img {
-    width: 25%;
-    height: auto;
-}
-
-img.project_img {
-    width: 70%;
-    height: auto;
-    max-width: 25em;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-}
-
-figure {
-    text-align: center;
-}
-
-.multiple_fig {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
-    gap: 0em;
-    margin: 0.5em 0;
-    align-items: center;
-}
-
-
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2em;
-    margin: 2em 0;
-}
-
-.project {
-    text-align: center;
-    border: 2px solid #00FF00;
-    padding: 1em;
-}
-
-.project img {
-    width: 100%;
-    height: auto;
-}
-
-/* Mobile */
-@media (max-width: 550px) {
-    .role-item {
-        flex-direction: column;
-        gap: 0.3em;
+@media only screen and (min-width: 1100px) { 
+    body {
+        width:50%;
+        margin:0 auto;
+    }
+    .me_image img {
+    height:25vw;
     }
 }
 
-/* Dark mode (default) */
-body {
-    color: #FFFFFF;
-    background-image: url('images/blackbg.gif');
-    font-size: 1.2em;
-}
 
-
-a:link {
-    text-decoration: none;
-    color: #00FF00;
-}
-
-a:visited {
-    text-decoration: none;
-    color: #00FF00;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-a:active {
-    text-decoration: underline;
-}
-
-img#theme_img {
-    content: url('images/moon.gif');
-}
-
-img#welcome_img {
-    content: url('images/welcome_dark.gif');
-}
-
-img#bottom_bar {
-    content: url('images/arrowbar.gif');
-}
-
-
-button.top_button {
-    padding: 0.2em;
-    padding-right: 0.75em;
-    font-size: 0.8em;
-    color: #fff;
-    background: #000;
-    border: 0.15em solid #fff;
-    cursor: pointer;
+@media only screen and (max-width: 1100px) {
+    body {
+        width:60%;
+        margin:0 auto;
+    }
+    header, footer {text-align:left;}
+    .me_image img {
+    height:30vw;
+    }
 }
 
 
 
-/* Light mode */
-body.light-mode {
-    color: #000000;
-    background-image: url('images/rainbow.jpg');
-    font-size: 1.2em;
+
+@media only screen and (max-width: 800px) {
+    body {
+        width:75%;
+        margin:0 auto;
+    }
+    .me_image { display:block;
+    grid-column: 2;
+    /* Positions the image in the second column */
+    justify-self: left;}
+    header, footer {
+        text-align:left;
+        width:90%;
+    }
+
+    
+    .me_image img {
+    height:40vw;
+    }
 }
 
-
-body.light-mode a:link {
-    text-decoration: none;
-    color: #0000FF;
-}
-
-body.light-mode a:visited {
-    text-decoration: none;
-    color: #0000FF
-}
-
-body.light-mode a:hover {
-    text-decoration: underline;
-}
-
-body.light-mode a:active {
-    text-decoration: underline;
-}
-
-body.light-mode img#theme_img {
-    content: url('images/sun.gif');
-}
-
-body.light-mode img#welcome_img {
-    content: url('images/welcome_light.gif');
-}
-
-body.light-mode img#bottom_bar {
-    content: url('images/strobebar.gif');
-}
-
-body.light-mode button.top_button {
-    padding: 0.2em;
-    padding-right: 0.75em;
-    font-size: 0.8em;
-    color: #000000;
-    background: #ffffff;
-    border: 0.15em solid #000000;
-    cursor: pointer;
-}
-
-body.light-mode .project {
-    text-align: center;
-    border: 2px solid #ff00ff;
-    padding: 1em;
-}
-
-body.light-mode .role-item {
-    /* display: flex; */
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 0.5em;
-    border: 2px solid #ff00ff;
-    padding: 1em 0.75em;
+@media only screen and (max-width: 500px) {
+    body {
+        width:85%;
+        margin:0 auto;
+    }
+    
+    .me_image img {
+    height:50vw;
+    }
+    
 }
