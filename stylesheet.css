@@ -13,7 +13,10 @@
 
 body {
     font-family: myFont; /* use font */
-    padding:5%;
+    padding:2em;
+    background-color: var(--bgcolor);
+    color: var(--ink);
+
 
 }
 
@@ -29,17 +32,34 @@ a:hover {
 
 nav a{ 
     font-size:1.75rem;
-    margin-bottom:10px;
+    margin-bottom:min(1.75rem, 4vw);
 }
 
 
 
-.two_column {
-    display: grid;
-    grid-template-columns: auto auto;
-    padding: 10px;
-    text-align: left;
-} 
+
+/* .two_column div {
+  background-color: white;
+  padding: 10px;
+} */
+
+/* .
+.container div.header {
+  grid-area: header;
+  text-align: center;
+}
+.container div.menu {
+  grid-area: menu;
+}
+.container div.content {
+  grid-area: content;
+}
+.container div.footer {
+  grid-area: footer;
+  text-align: center;  
+} */
+
+
 
 .vertical_layout 
 {
@@ -68,12 +88,12 @@ nav {
     justify-content: space-evenly;
     text-align: left;
     font-size:1rem;
-    width:50vw;
+    /* width:80vw; */
 }
 
 header, footer {text-align:left;}
 
-header, main, footer{
+/* header, main, footer{
     display:flex;
     flex-direction: row;
     text-align: left;
@@ -83,70 +103,154 @@ header, main, footer{
     padding:0;
     margin:0 auto;
     margin-bottom: 0.5vw;
+} */
+
+
+.two_column {
+  display: grid;
+  grid-template-areas: "left right";
+    grid-template-columns: 35vw auto;
+
+  padding: 5px;
+  text-align: center;
 }
+
+
 
 .trail {
     font-size: 1.25rem;
     text-align: left;
-    width:90%;
+    /* width:90%; */
     margin:0 auto;
-    margin-bottom: 0.5vw;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+    
+    height: 0.5rem;
 }
 
 h1 {
     font-size: 2.75rem;
 }
 
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
 .me_image img{
     text-align: right;
 }
 
-.me_image #me_image_about {
+/* .me_image #me_image_about {
     height: 50vw;
     max-height: 250px;
-    /* margin: h auto; */
+} */
+
+ p {
+    margin-bottom: -0.5rem;
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
 }
+
+.project img{
+    width: min(15rem, 30vw);
+    height: auto;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    display: block;
+    margin: auto;
+}
+
+
+
+.multiple_fig figure {
+    text-align: center;
+    width: min(10rem, 65vw);
+}
+
+figure  {
+    text-align: center;
+}
+
+.video {
+    margin: 2em;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+
+
+}
+
+video {
+    width: min(90%, 30rem);
+    height: auto;
+}
+
+/* .multiple_fig {
+    display: grid;
+    grid-template-columns: "left center right";
+    gap: 0em;
+    margin: 0.5em 0;
+    align-items: center;
+} */
+
+.multiple_fig {
+  display: flex;
+  flex-wrap: wrap; /* Allows vertical stacking when space runs out */
+  gap: 15px;       /* Adds spacing between the images */
+  align-items: center;
+  justify-content: center;
+}
+
+#mushroom {
+    width:  min(30rem, 65vw);
+}
+
+
+
 
 @media only screen and (min-width: 1100px) { 
     body {
-        width:50%;
+        width: min(50rem, 50%);
         margin:0 auto;
     }
     .me_image img {
-    height:25vw;
+        height:min(30vw, 17.5rem);
+
     }
 }
 
 
 @media only screen and (max-width: 1100px) {
     body {
-        width:60%;
+        width: min(50rem, 50%);
         margin:0 auto;
     }
-    header, footer {text-align:left;}
     .me_image img {
-    height:30vw;
+
+    height:min(30vw, 17.5rem);
     }
 }
 
 
 
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 700px) {
     body {
         width:75%;
         margin:0 auto;
+        /* margin-left: ; */
     }
     
-    header, footer {
-        text-align:left;
-        width:90%;
-    }
 
     
     .me_image img {
     height:40vw;
     }
+
 }
 
 @media only screen and (max-width: 500px) {
@@ -158,8 +262,14 @@ h1 {
     .me_image img {
     height:50vw;
     }
+
+    /* .two_column {
+        grid-template-columns: 100% auto;
+    } */
     
 }
+
+
 
 /* pixel speech bubble */
 
@@ -299,3 +409,17 @@ line-height: 1.25;
   .tail-dot--3 .tail-dot-fill{
     inset: 3px; /* thinner outline so the smallest dot doesn't fill solid */
   }
+
+
+.switch{
+  height: 3.5rem;
+}
+
+button {
+    padding: 0;
+    border: none;
+    background: none;
+    padding-bottom: 4.4em;
+}
+
+
