@@ -18,6 +18,7 @@
 body {
     font-family: myFont; /* use font */
     padding-top: 2em;
+    padding-bottom: 5em;
     background-color: var(--bgcolor);
     color: var(--ink);
 
@@ -153,11 +154,12 @@ h3 {
     max-height: 250px;
 } */
 
- p {
+ p, ol {
     margin-bottom: -0.5rem;
     margin-top: 1.5rem;
     font-size: 1.3rem;
 }
+
 
 .project img{
     width: min(15rem, 30vw);
@@ -168,15 +170,20 @@ h3 {
     margin: auto;
 }
 
-
-
-.multiple_fig figure {
-    text-align: center;
-    width: min(10rem, 65vw);
+.vertical img {
+    max-height: min(20rem, 50vw);
+    width: auto;
 }
 
 figure  {
     text-align: center;
+    
+}
+
+figcaption {
+    /* font-size: 1rem; */
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 .video {
@@ -201,13 +208,50 @@ video {
     align-items: center;
 } */
 
-.multiple_fig {
+/* .multiple_fig{
   display: flex;
-  flex-wrap: wrap; /* Allows vertical stacking when space runs out */
-  gap: 15px;       /* Adds spacing between the images */
-  align-items: center;
+  flex-wrap: wrap; 
+  gap: 15px;       
+  align-items: flex-start;
   justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
+
+
+.multiple_fig figure {
+    box-sizing: border-box;
+    text-align: center;
+    width: min(10rem, 65vw);
+    margin: 0;
+} */
+
+/* .multiple_fig {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5%;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+}
+
+.multiple_fig figure {
+  box-sizing: border-box;
+  text-align: center;
+  width: min(10rem, 65vw);
+  margin: 0;
+}
+
+.multiple_fig figure img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+} */
+
 
 #mushroom {
     width:  min(30rem, 65vw);
