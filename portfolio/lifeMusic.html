@@ -1,0 +1,106 @@
+<html>
+<script src="script.js"></script>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Win Chan | ">
+    <title>Win Chan | </title>
+    <!-- adding icon on the tab  -->
+    <link rel="icon" type="image/png" href="../images/me.png" />
+    <meta property="og:image" content="../images/me.png" />
+    <link rel="stylesheet" href="../stylesheet.css">
+
+
+</head>
+
+<body>
+    <!-- <div class="two_colum"> -->
+        <div class="trail">
+            <a href="../index.html">Home</a> 
+            &gt; <a href="../portfolio.html">Portfolio</a>
+            &gt; <a href="lifeMusic.html">Artficial Life, Sonified</a>
+    </div>
+    <header>
+        <h1>Artficial Life, Sonified</h1>
+    </header>
+    
+    <main>
+        <!-- design projects -->
+        <div class="project">
+            <h2>Real-time interactive musification of an artificial particle-life system</h2>    
+            
+            <p class="underTitle">
+                Generative Music · Sound Interaction  · Human-Algorithm Interaction
+                <br>
+                Colaborated with Oskar Lövgren, Barry John Wootton, Yu Lu · 2025 
+                <br>
+                <a href="lifeMusic/report.pdf" target="_blank"><strong>Full Report</strong></a>
+            </p> 
+
+            <p class="project">
+                Artificial life algorithms have been opening up new ways of music generation  and expression.
+            </p>
+            <p class="project">
+                But, can they be a composition partner to human creators rather than just a tools?
+            </p>
+            <p class="project">
+                How would human interference change the musical outcome while still keeping to stochasticness?
+            </p>
+            <h3>Design Concept</h3>
+            <p class="project">
+                We wanted to explore real-time musical interaction with a generative system, where a person can influence its 
+                behavior but never dictate the outcome. 
+            </p>
+            <p class="project">
+                We choose particle-based artificial life. Here, a person can disturb 
+                the system, such as dragging the particles and change the settings. But the music still eventually emerges from 
+                the particle system's own dynamics, not from direct human control. This let us treat the artificial life system 
+                less like an instrument being played, and, instead, a live collaborator.    
+            </p>
+            
+            <h3>System Design</h3>
+            <p class="project">
+                We built on <a href="https://www.ventrella.com/Clusters/" target="_blank">Clusters</a>, an open-source, browser-based
+                particle-life simulator, and added real-time MIDI outputs that connnects to Ableton Live. Particles belobgs to different
+                "species" (by color) with simple attraction and repulsion rules that lets them cluster into groups and dissolve on their own.
+            </p>
+            <p class="project">
+                To interact with the particles, a "sample area" is created where when particles pass through, it reads their entry positions,
+                speed, and size, and then map those values out as MIDI parameters. Each species have a disinct role: some shapes harmony. others shapes
+                textures, and some handles mixing. These parameter signals feed a live Ableton Live session, allowing the particles' sparse, momentary 
+                triggers translate into continuous, evolving sound.
+            </p>
+            <p class="project">
+            </p>
+            <div class="multiple_fig">
+                <figure class="project multiple_fig">
+                    <img src=""
+                        alt="" class="project_img">
+                    <figcaption></figcaption>
+                </figure>
+                <figure class="project multiple_fig">
+                    <img src=""
+                        alt="" class="project_img">
+                    <figcaption></figcaption>
+                </figure>
+            </div>
+
+           
+            <figure class="project multiple_fig">
+                <img src=""
+                    alt="" class="project_img">
+                <br>
+                <figcaption></figcaption>
+            </figure>
+        </div>
+        
+    </main>
+
+    
+    
+    <!-- </div> -->
+    
+</body>
+
+</html>
