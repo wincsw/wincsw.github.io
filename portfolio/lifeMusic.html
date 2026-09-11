@@ -53,11 +53,13 @@
                 behavior but never dictate the outcome. 
             </p>
             <p class="project">
-                We choose particle-based artificial life. Here, a person can disturb 
-                the system, such as dragging the particles and change the settings. But the music still eventually emerges from 
-                the particle system's own dynamics, not from direct human control. This let us treat the artificial life system 
-                less like an instrument being played, and, instead, a live collaborator.    
+                We choose particle-based artificial life, where the music emerges from 
+                the particle system's own dynamics with some level of human input. 
+                This let us treat the artificial life system less like an instrument being played, 
+                and, instead, a live collaborator.    
             </p>
+
+            
             
             <h3>System Design</h3>
             <p class="project">
@@ -65,12 +67,78 @@
                 particle-life simulator, and added real-time MIDI outputs that connnects to Ableton Live. Particles belobgs to different
                 "species" (by color) with simple attraction and repulsion rules that lets them cluster into groups and dissolve on their own.
             </p>
+            <figure class="project">
+                <img src="lifeMusic/interface.png"
+                    alt="" class="project_img">
+                <br>
+                <figcaption>Interface adapted from <i>Cluster</i></figcaption>
+            </figure>
+
+            <h3>Interaction Design</h3>
             <p class="project">
-                To interact with the particles, a "sample area" is created where when particles pass through, it reads their entry positions,
-                speed, and size, and then map those values out as MIDI parameters. Each species have a disinct role: some shapes harmony. others shapes
-                textures, and some handles mixing. These parameter signals feed a live Ableton Live session, allowing the particles' sparse, momentary 
-                triggers translate into continuous, evolving sound.
+                As the human collaborator, we interact with the simulation through placing/moving a circular 
+                "sample area" on the screen, where both particles entering and existing this zone 
+                will trigger musical events and changes. This allows use to "listen" to one region at a time, rather 
+                than tracking every particle at once that removes the human collabotation aspect. 
             </p>
+            <p class="project">
+                We don't interact with individual particles, but treat them as a cluster.
+                When a particle enters the "sample area", we trace from its entry point, check the others 
+                that are trailing close behind it, and then consider them as a cluster.
+            </p>    
+            
+            <figure class="project">
+                <img src="lifeMusic/entryNexit.png"
+                    alt="" class="project_img vertical">
+                <br>
+                <figcaption>Sample area for particle interaction</figcaption>
+            </figure>
+            <p class="project">
+                Beyond observing, the system allows direct interference tp the simulation by dragging particles
+                manually into the sample area, "zap" to accelerate their movement in a random direction for a moment, 
+                and pausing the simulation. These allows the human to nudge or provoke the system without ever 
+                fully controlling it, which is the core interaction we are aiming after.
+            </p>
+            <p class="project">
+                There are also other prameters that can be adjusted for the interaction with the simulation,
+                such as changing the number of total particles, sample area size, cluster size, and attraction/repulsion rules. 
+                These are parameter changes that are already offered by the original Clusters system, but we replaced the 
+                default interface with a floating, collapsible lil-gui panel to trim down to only relevant controls and 
+                leave more screen space for the particles themselves. 
+            </p>
+            <figure class="project">
+                <img src="lifeMusic/gui.png"
+                    alt="" class="project_img">
+                <br>
+                <figcaption>Floating and foldable control panel</figcaption>
+            </figure>
+            
+            <h3>Musical Design</h3>
+            <p class="project">
+                Each particle species were given a distinct musical role: one controlling harmony (entry position → root pitch, group size → chord density),
+                others driving modulation, sequencing, or mix balance. This allows the system to behaved less like 
+                "one species = one full sound" and more like an ensemble with distributed responsibility create
+                a more fluid and continues musical texture.
+            </p>
+
+            <figure class="project">
+                <img src="lifeMusic/mapping.png"
+                    alt="" class="project_img">
+                <br>
+                <figcaption>Mapping of particle species to musical behavior</figcaption>
+            </figure>
+
+
+            <h3>Human-ALife Collaboration?</h3>
+            <p class="project">
+                The open question we didn't fully resolve is how people will actually use this system to create music, like how
+                will it be used for coposition of live performance? Another question is that is there a meaningful connection 
+                to a listener who isn't watching the particles or not knowing the system design, will it reads as a 
+                genuine cause-and-effect relationship, or just as pleasant coincidence. Given more time, we wpuld want to 
+                test this with actual musicians and listeners to gain a deeper understanding of how humam-alife musical 
+                collaboration can look like.
+            </p>
+
             <p class="project">
             </p>
             <div class="multiple_fig">

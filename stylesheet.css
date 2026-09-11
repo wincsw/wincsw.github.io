@@ -154,7 +154,7 @@ h3 {
     max-height: 250px;
 } */
 
- p, ol {
+ p {
     margin-bottom: -0.5rem;
     margin-top: 1.5rem;
     font-size: 1.3rem;
@@ -169,8 +169,10 @@ h3 {
 
 
 .project img{
-    width: min(25rem, 45vw);
+    max-width: min(50rem, 45vw);
     height: auto;
+    max-height: min(25rem, 35vw);
+    width: auto;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     display: block;
@@ -178,7 +180,6 @@ h3 {
 }
 
 .vertical img {
-    max-height: min(20rem, 50vw);
     width: auto;
 }
 
@@ -207,6 +208,19 @@ figcaption {
 video {
     width: min(90%, 30rem);
     height: auto;
+}
+
+ul{
+  list-style: square;
+  padding-left: 1.5rem;
+
+}
+
+li, ol {
+    margin-bottom: 0.7rem;
+    /* margin-top: 1.5rem; */
+    font-size: 1.3rem;
+    
 }
 
 /* .multiple_fig {
